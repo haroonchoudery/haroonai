@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { Suspense } from 'react';
-import ViewCounter from './view-counter';
-import { getViewsCount } from 'app/db/queries';
-import { getBlogPosts } from 'app/db/blog';
+import Link from "next/link";
+import { Suspense } from "react";
+import ViewCounter from "./view-counter";
+import { getViewsCount } from "app/db/queries";
+import { getBlogPosts } from "app/db/blog";
 
 export const metadata = {
-  title: 'Blog',
-  description: 'Read my thoughts on software development, design, and more.',
+  title: "Blog",
+  description: "Read my thoughts on software development, design, and more.",
 };
 
 export default function BlogPage() {
@@ -36,9 +36,9 @@ export default function BlogPage() {
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 {post.metadata.title}
               </p>
-              <Suspense fallback={<p className="h-6" />}>
-                <Views slug={post.slug} />
-              </Suspense>
+              <p className="h-6 text-neutral-600 dark:text-neutral-400">
+                {post.metadata.publishedAt}
+              </p>
             </div>
           </Link>
         ))}

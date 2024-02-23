@@ -1,6 +1,6 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import dotenv from 'dotenv';
+import { promises as fs } from "fs";
+import path from "path";
+import dotenv from "dotenv";
 
 const template = `---
 title: 'Hello, World!'
@@ -50,22 +50,22 @@ const deleteFolderRecursive = async (path) => {
 (async () => {
   dotenv.config();
 
-  if (process.env.IS_TEMPLATE === 'false') {
+  if (process.env.IS_TEMPLATE === "false") {
     // This means it's not the template, it's my legit site
     // I orderride the env variable for my site. This means that when
     // folks clone this repo for the first time, it will delete my personal content
     return;
   }
 
-  const contentDir = path.join(process.cwd(), 'content');
-  const imagesDir = path.join(process.cwd(), 'public', 'images');
-  const appDir = path.join(process.cwd(), 'app');
-  const workDir = path.join(process.cwd(), 'app', 'work');
+  const contentDir = path.join(process.cwd(), "content");
+  const imagesDir = path.join(process.cwd(), "public", "images");
+  const appDir = path.join(process.cwd(), "app");
+  const workDir = path.join(process.cwd(), "app", "work");
 
   await deleteFolderRecursive(contentDir);
   await deleteFolderRecursive(imagesDir);
   await fs.mkdir(contentDir);
-  await fs.writeFile(path.join(contentDir, 'hello-world.mdx'), template);
-  await fs.writeFile(path.join(appDir, 'page.tsx'), homePage);
-  await fs.writeFile(path.join(workDir, 'page.tsx'), workPage);
+  await fs.writeFile(path.join(contentDir, "hello-world.mdx"), template);
+  await fs.writeFile(path.join(appDir, "page.tsx"), homePage);
+  await fs.writeFile(path.join(workDir, "page.tsx"), workPage);
 })();
