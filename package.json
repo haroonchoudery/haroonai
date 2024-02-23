@@ -10,7 +10,11 @@
   "dependencies": {
     "@codesandbox/sandpack-react": "2.12.0",
     "@googleapis/youtube": "^13.1.0",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.0",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/mdx": "^2.0.11",
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
