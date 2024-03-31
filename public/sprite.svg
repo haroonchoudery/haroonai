@@ -3,6 +3,15 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
   <defs>
+    <symbol 
+      id="autoblocks" 
+      width="13"
+      height="15"
+      viewBox="0 0 130 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M36.7062 16.1992L64.221 0.366333L132 39.6817V119.261L105.375 134.62V55.6925L36.7062 16.1992ZM0 36.8946L33.0297 17.8596L101.402 57.4122V136.636L68.6092 155.552V117.779V76.3879L0 36.8946ZM68.6092 117.779L32.8518 97.2019V55.8111L0.592992 74.3717V116.415L35.9353 136.814L68.6092 117.779Z" fill="currentColor"/>
+    </symbol>
     <symbol
       id="resend"
       width="70"
